@@ -13,7 +13,7 @@ class OverworldMap {
   drawLowerImage(ctx, cameraPerson) {
     ctx.drawImage(
       this.lowerImage,
-      utils.withGrid(10,5) - cameraPerson.x,
+      utils.withGrid(10.5) - cameraPerson.x,
       utils.withGrid(6) - cameraPerson.y
     );
   }
@@ -21,7 +21,7 @@ class OverworldMap {
   drawUpperImage(ctx, cameraPerson) {
     ctx.drawImage(
       this.upperImage,
-      utils.withGrid(10,5) - cameraPerson.x,
+      utils.withGrid(10.5) - cameraPerson.x,
       utils.withGrid(6) - cameraPerson.y
     );
   }
@@ -44,11 +44,11 @@ class OverworldMap {
   removeWall(x,y) {
    delete this.walls[`${x},${y}`]
   }
-  /*moveWall(wasX, wasY, direction) {
+  moveWall(wasX, wasY, direction) {
     this.removeWall(wasX, wasY);
     const {x,y} = utils.nextPosition(wasX, wasY, direction);
     this.addWall(x,y);
-  }*/
+  }
 }
 
 window.OverworldMaps = {
@@ -91,7 +91,7 @@ window.OverworldMaps = {
         x: 10,
         y: 8,
         src: '/images/characters/people/npc3.png'
-      }),
+      })
     }
   },
   

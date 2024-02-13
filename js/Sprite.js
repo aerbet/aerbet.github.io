@@ -55,7 +55,7 @@ class Sprite {
   updateAnimationProgress() {
     // Down-tick frame progress
     if (this.animationFrameProgress > 0) {
-      this.animationFrameProgress -= 0.25;
+      this.animationFrameProgress -= 1;
       return;
     }
     

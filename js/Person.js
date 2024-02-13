@@ -6,10 +6,10 @@ class Person extends GameObject {
     this.isPlayerControlled = config.isPlayerControlled || false;
     
     this.directionUpdate = {
-      'up': ['y', -0.25],
-      'down': ['y', 0.25],
-      'left': ['x', -0.25],
-      'right': ['x', 0.25],
+      'up': ['y',  -1],
+      'down': ['y', 1],
+      'left': ['x',  -1],
+      'right': ['x', 1],
     }
   }
   
@@ -41,7 +41,7 @@ class Person extends GameObject {
         return;
       }
       //ready to walk
-      /*state.map.moveWall(this.x, this.y, this.direction);*/
+      state.map.moveWall(this.x, this.y, this.direction);
       this.movingProgressRemaining = 16;
     }
   }
